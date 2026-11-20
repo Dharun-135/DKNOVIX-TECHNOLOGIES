@@ -88,7 +88,7 @@ const projects: (ProjectItem & { svgPath?: string })[] = [
     category: 'Web & Software',
     recognition: 'Production Web Architecture',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Portfolio', 'React Three Fiber', 'Framer Motion'],
-    github: 'https://github.com/Dharun-135/DHARUN-PORTFOLIO',
+    github: 'https://github.com/Dharun-135/DKNOVIX-TECHNOLOGIES',
     demo: 'https://dharunkarthikportfolio.netlify.app/',
     svgPath: '/projects/portfolio-web.svg',
     stats: [
