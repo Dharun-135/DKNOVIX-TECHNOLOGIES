@@ -107,7 +107,7 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
   };
 
   return (
-    <section id="contact" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 min-w-0">
+    <section id="contact" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 w-full max-w-full overflow-hidden min-w-0">
       {/* Section Header */}
       <div className="flex flex-col items-start mb-16">
         <motion.div
@@ -351,7 +351,7 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                         placeholder="e.g. John Anderson"
-                        className="w-full px-4 py-3 bg-[#050505] rounded-sm border border-white/10 text-white placeholder-white/20 font-sans text-sm focus:outline-none focus:border-[#FF172F] transition-colors"
+                        className="w-full px-4 py-3 bg-[#050505] rounded-sm border border-white/10 text-white placeholder-white/20 font-sans text-base sm:text-sm focus:outline-none focus:border-[#FF172F] transition-colors"
                       />
                       {errors.fullName && (
                         <p className="flex items-center gap-1 font-mono text-[11px] text-[#FF172F] mt-1.5">
@@ -372,7 +372,7 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="e.g. john@company.com"
-                        className="w-full px-4 py-3 bg-[#050505] rounded-sm border border-white/10 text-white placeholder-white/20 font-sans text-sm focus:outline-none focus:border-[#FF172F] transition-colors"
+                        className="w-full px-4 py-3 bg-[#050505] rounded-sm border border-white/10 text-white placeholder-white/20 font-sans text-base sm:text-sm focus:outline-none focus:border-[#FF172F] transition-colors"
                       />
                       {errors.email && (
                         <p className="flex items-center gap-1 font-mono text-[11px] text-[#FF172F] mt-1.5">
@@ -395,7 +395,7 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         placeholder="e.g. Cybernetics Corp"
-                        className="w-full px-4 py-3 bg-[#050505] rounded-sm border border-white/10 text-white placeholder-white/20 font-sans text-sm focus:outline-none focus:border-[#FF172F] transition-colors"
+                        className="w-full px-4 py-3 bg-[#050505] rounded-sm border border-white/10 text-white placeholder-white/20 font-sans text-base sm:text-sm focus:outline-none focus:border-[#FF172F] transition-colors"
                       />
                     </div>
 
@@ -407,7 +407,7 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
                         name="serviceRequired"
                         value={formData.serviceRequired}
                         onChange={(e) => setFormData({ ...formData, serviceRequired: e.target.value })}
-                        className="w-full px-4 py-3 bg-[#050505] rounded-sm border border-white/10 text-white font-sans text-sm focus:outline-none focus:border-[#FF172F] transition-colors cursor-pointer"
+                        className="w-full px-4 py-3 bg-[#050505] rounded-sm border border-white/10 text-white font-sans text-base sm:text-sm focus:outline-none focus:border-[#FF172F] transition-colors cursor-pointer"
                       >
                         <option value="WEB DEVELOPMENT">01 – WEB DEVELOPMENT</option>
                         <option value="AI & MACHINE LEARNING">02 – AI & MACHINE LEARNING</option>
@@ -431,7 +431,7 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
                       value={formData.projectDescription}
                       onChange={(e) => setFormData({ ...formData, projectDescription: e.target.value })}
                       placeholder="Outline your project scope, vision, timeline, and architectural targets..."
-                      className="w-full px-4 py-3 bg-[#050505] rounded-sm border border-white/10 text-white placeholder-white/20 font-sans text-sm focus:outline-none focus:border-[#FF172F] transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-[#050505] rounded-sm border border-white/10 text-white placeholder-white/20 font-sans text-base sm:text-sm focus:outline-none focus:border-[#FF172F] transition-colors resize-none"
                     />
                     {errors.projectDescription && (
                       <p className="flex items-center gap-1 font-mono text-[11px] text-[#FF172F] mt-1.5">

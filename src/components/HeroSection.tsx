@@ -13,26 +13,26 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[100dvh] flex flex-col justify-between pt-32 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 min-w-0"
+      className="relative min-h-[100dvh] flex flex-col justify-between pt-32 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 w-full max-w-full overflow-hidden min-w-0"
     >
       {/* Top Space Filler */}
       <div className="w-full" />
 
       {/* Hero Content Grid: Left Content with negative space allowing 3D robot to shine */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-w-0">
-        <div className="lg:col-span-7 xl:col-span-7 flex flex-col items-start text-left min-w-0 relative">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-w-0 w-full">
+        <div className="lg:col-span-7 xl:col-span-7 flex flex-col items-start text-left min-w-0 relative w-full">
           {/* Mobile Legibility Dark Backdrop Glow */}
-          <div className="lg:hidden absolute -inset-6 bg-[#050505]/75 backdrop-blur-md rounded-2xl -z-10 pointer-events-none" />
+          <div className="lg:hidden absolute inset-0 sm:-inset-4 bg-[#050505]/75 backdrop-blur-md rounded-2xl -z-10 pointer-events-none" />
 
           {/* Small Upper Label */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#26070D]/70 border border-[#FF172F]/30 backdrop-blur-md mb-6"
+            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#26070D]/70 border border-[#FF172F]/30 backdrop-blur-md mb-6 max-w-full"
           >
-            <span className="w-2 h-2 rounded-full bg-[#FF172F] shadow-[0_0_8px_#FF172F] animate-pulse" />
-            <span className="font-mono text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-[#F5F5F5] uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#FF172F] shadow-[0_0_8px_#FF172F] animate-pulse shrink-0" />
+            <span className="font-mono text-[10px] sm:text-xs font-semibold tracking-[0.14em] sm:tracking-[0.22em] text-[#F5F5F5] uppercase break-words">
               THE NEXT GENERATION OF TECHNOLOGY
             </span>
           </motion.div>

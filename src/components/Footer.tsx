@@ -12,9 +12,11 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[#050505] border-t border-[#FF172F]/20 pt-20 pb-12 overflow-hidden z-10 min-w-0">
+    <footer className="relative bg-[#050505] border-t border-[#FF172F]/20 pt-20 pb-12 overflow-hidden z-10 w-full max-w-full min-w-0">
       {/* Subtle Bottom Crimson Ambient Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#FF172F]/10 blur-[140px] pointer-events-none" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#FF172F]/10 blur-[140px] pointer-events-none" />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Content Grid */}
@@ -193,9 +195,9 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar: Copyright & Back to Top */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#92929B]">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-left min-w-0">
-            <span>© {currentYear} DKNOVIX TECHNOLOGIES. ALL RIGHTS RESERVED.</span>
+            <span className="break-words">© {currentYear} DKNOVIX TECHNOLOGIES. ALL RIGHTS RESERVED.</span>
             <span className="text-[#FF172F] hidden sm:inline-block">//</span>
-            <span className="text-gradient-fire font-bold tracking-widest uppercase">
+            <span className="text-gradient-fire font-bold tracking-widest uppercase break-words">
               ENGINEER THE FUTURE.
             </span>
           </div>

@@ -36,7 +36,7 @@ const featureCards = [
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 min-w-0">
+    <section id="about" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 w-full max-w-full overflow-hidden min-w-0">
       {/* Section Header */}
       <div className="flex flex-col items-start mb-16">
         <motion.div
@@ -146,7 +146,7 @@ export const AboutSection: React.FC = () => {
       </div>
 
       {/* 4 Interactive Feature Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-full min-w-0">
         {featureCards.map((card, idx) => {
           const Icon = card.icon;
           return (
@@ -157,32 +157,32 @@ export const AboutSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.12 }}
               onMouseEnter={() => sound.playHover()}
-              className="glass-panel glass-panel-hover p-6 sm:p-7 rounded-sm flex flex-col justify-between group cursor-default relative overflow-hidden"
+              className="glass-panel glass-panel-hover p-6 sm:p-7 rounded-sm flex flex-col justify-between group cursor-default relative overflow-hidden w-full max-w-full min-w-0"
             >
               {/* Corner decorative bracket */}
               <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[#FF172F]/30 group-hover:border-[#FF172F] transition-colors" />
 
-              <div>
+              <div className="w-full min-w-0">
                 {/* Code Tag */}
                 <div className="flex items-center justify-between mb-6">
                   <span className="font-mono text-[10px] text-[#92929B] tracking-[0.2em]">
                     {card.code}
                   </span>
-                  <div className="p-2.5 rounded-sm bg-[#0B0B0E] border border-[#FF172F]/20 text-[#FF172F] group-hover:scale-110 group-hover:border-[#FF172F] group-hover:shadow-[0_0_15px_rgba(255,23,47,0.3)] transition-all duration-300">
+                  <div className="p-2.5 rounded-sm bg-[#0B0B0E] border border-[#FF172F]/20 text-[#FF172F] group-hover:scale-110 group-hover:border-[#FF172F] group-hover:shadow-[0_0_15px_rgba(255,23,47,0.3)] transition-all duration-300 shrink-0">
                     <Icon size={20} />
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="font-display text-xl font-bold tracking-wider text-[#F5F5F5] group-hover:text-white mb-1">
+                <h3 className="font-display text-xl font-bold tracking-wider text-[#F5F5F5] group-hover:text-white mb-1 break-words">
                   {card.title}
                 </h3>
-                <p className="font-mono text-[11px] text-[#FF172F] tracking-[0.15em] mb-4 uppercase">
+                <p className="font-mono text-[11px] text-[#FF172F] tracking-[0.15em] mb-4 uppercase break-words">
                   {card.subtitle}
                 </p>
 
                 {/* Description */}
-                <p className="font-sans text-xs sm:text-sm text-[#92929B] group-hover:text-[#F5F5F5]/90 leading-relaxed transition-colors">
+                <p className="font-sans text-xs sm:text-sm text-[#92929B] group-hover:text-[#F5F5F5]/90 leading-relaxed transition-colors break-words">
                   {card.description}
                 </p>
               </div>

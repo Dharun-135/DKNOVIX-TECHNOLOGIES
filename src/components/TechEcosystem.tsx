@@ -63,7 +63,7 @@ export const TechEcosystem: React.FC = () => {
     : technologies.filter((tech) => tech.category === activeCategory);
 
   return (
-    <section id="tech-ecosystem" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 min-w-0">
+    <section id="tech-ecosystem" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 w-full max-w-full overflow-hidden min-w-0">
       {/* Section Header */}
       <div className="flex flex-col items-start mb-14">
         <motion.div
@@ -82,7 +82,7 @@ export const TechEcosystem: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#F5F5F5] tracking-tight leading-tight"
+          className="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#F5F5F5] tracking-tight leading-tight"
         >
           BUILT WITH INTELLIGENCE.
         </motion.h2>
@@ -128,7 +128,7 @@ export const TechEcosystem: React.FC = () => {
       {/* Technologies Cards Grid */}
       <motion.div
         layout
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full max-w-full min-w-0"
       >
         <AnimatePresence>
           {filteredTechnologies.map((tech) => (
@@ -140,7 +140,7 @@ export const TechEcosystem: React.FC = () => {
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
               onMouseEnter={() => sound.playHover()}
-              className="glass-panel glass-panel-hover p-5 rounded-sm group relative overflow-hidden flex flex-col justify-between"
+              className="glass-panel glass-panel-hover p-5 rounded-sm group relative overflow-hidden flex flex-col justify-between w-full max-w-full min-w-0"
             >
               {/* Top Accent Strip */}
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF172F]/40 to-transparent group-hover:via-[#FF172F] transition-all" />

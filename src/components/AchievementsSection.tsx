@@ -38,7 +38,7 @@ const achievements = [
 
 export const AchievementsSection: React.FC = () => {
   return (
-    <section id="achievements" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 min-w-0">
+    <section id="achievements" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 w-full max-w-full overflow-hidden min-w-0">
       {/* Section Header */}
       <div className="flex flex-col items-start mb-20">
         <motion.div

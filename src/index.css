@@ -16,14 +16,34 @@
 }
 
 @layer base {
-  * {
-    border-color: rgba(255, 23, 47, 0.12);
+  html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
   }
-  
+
   body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+    position: relative;
     background-color: #050505;
     color: #F5F5F5;
     font-family: var(--font-sans);
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    border-color: rgba(255, 23, 47, 0.12);
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
   }
 }
 
@@ -109,7 +129,7 @@
 .founder-name {
   white-space: nowrap !important;
   width: 100%;
-  font-size: clamp(20px, 3vw, 38px);
+  font-size: clamp(18px, 4.2vw, 38px);
   letter-spacing: 0.02em;
   line-height: 1.2;
   font-weight: 700;

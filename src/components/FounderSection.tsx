@@ -50,10 +50,12 @@ export const FounderSection: React.FC = () => {
   };
 
   return (
-    <section id="founder" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 min-w-0">
+    <section id="founder" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 w-full max-w-full overflow-hidden min-w-0">
       {/* Background Ambience: Subtle red light waves & particles */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#FF172F]/10 blur-[140px] pointer-events-none -z-10" />
-      <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-[#FF612E]/8 blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#FF172F]/10 blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-[#FF612E]/8 blur-[120px] pointer-events-none" />
+      </div>
 
       {/* Section Header */}
       <div className="flex flex-col items-start mb-16">
@@ -261,7 +263,7 @@ export const FounderSection: React.FC = () => {
               style={{
                 whiteSpace: 'nowrap',
                 width: '100%',
-                fontSize: 'clamp(20px, 3.2vw, 38px)',
+                fontSize: 'clamp(18px, 4.2vw, 38px)',
                 letterSpacing: '0.02em',
                 lineHeight: 1.2,
                 fontWeight: 700,
@@ -271,19 +273,19 @@ export const FounderSection: React.FC = () => {
               DHARUN KARTHIK S L
             </h3>
 
-            <p className="font-mono text-sm sm:text-base text-gradient-fire font-bold tracking-[0.22em] uppercase mb-2">
+            <p className="font-mono text-xs sm:text-base text-gradient-fire font-bold tracking-[0.16em] sm:tracking-[0.22em] uppercase mb-2 break-words">
               FOUNDER &amp; TECHNOLOGY DEVELOPER
             </p>
 
             {/* Required subtitle lines: */}
-            <p className="font-mono text-xs text-[#F5F5F5] tracking-[0.16em] uppercase font-semibold mb-2">
+            <p className="font-mono text-[11px] sm:text-xs text-[#F5F5F5] tracking-[0.08em] sm:tracking-[0.16em] uppercase font-semibold mb-2 break-words leading-relaxed">
               IT Support Engineer | Data Analyst | Full-Stack Developer | Application Developer
             </p>
 
-            <p className="font-sans text-xs sm:text-sm text-emerald-400 font-medium mb-4 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Available for immediate joining. Open to Abu Dhabi, Dubai and wider UAE.</span>
-            </p>
+            <div className="font-sans text-xs sm:text-sm text-emerald-400 font-medium mb-4 flex items-start gap-2 min-w-0">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0 mt-1" />
+              <span className="min-w-0 break-words">Available for immediate joining. Open to Abu Dhabi, Dubai and wider UAE.</span>
+            </div>
 
             <div className="flex flex-wrap items-center gap-y-2 gap-x-6 text-xs font-mono text-[#92929B]">
               <div className="flex items-center gap-2">
@@ -407,11 +409,11 @@ export const FounderSection: React.FC = () => {
             className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-6"
           >
             {/* Signature Block */}
-            <div className="flex flex-col">
+            <div className="flex flex-col min-w-0">
               <span className="font-display italic text-2xl sm:text-3xl font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white via-[#F5F5F5] to-[#FF172F]">
                 Dharun Karthik
               </span>
-              <span className="font-mono text-[10px] text-[#FF612E] tracking-[0.28em] uppercase font-semibold mt-1">
+              <span className="font-mono text-[9px] sm:text-[10px] text-[#FF612E] tracking-[0.16em] sm:tracking-[0.28em] uppercase font-semibold mt-1 break-words">
                 FOUNDER &amp; TECHNOLOGY DEVELOPER
               </span>
             </div>

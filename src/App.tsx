@@ -55,7 +55,7 @@ export function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#050505] text-[#F5F5F5] selection:bg-[#FF172F] selection:text-white overflow-x-hidden font-sans">
+    <div className="relative w-full max-w-full min-h-screen bg-[#050505] text-[#F5F5F5] selection:bg-[#FF172F] selection:text-white overflow-x-hidden font-sans">
       {/* 1. Cinematic Opening Intro Animation */}
       {!introCompleted && (
         <CinematicIntro onComplete={() => setIntroCompleted(true)} />
@@ -68,7 +68,7 @@ export function App() {
       <Navbar activeSection={activeSection} />
 
       {/* 4. Main Content Sections in exact particulars */}
-      <main className="relative z-10 flex flex-col">
+      <main className="relative z-10 flex flex-col w-full max-w-full overflow-x-hidden min-w-0">
         {/* 1. HOME */}
         <HeroSection />
 

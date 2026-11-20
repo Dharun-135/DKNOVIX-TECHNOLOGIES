@@ -103,7 +103,7 @@ export const FeaturedProjects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<(ProjectItem & { svgPath?: string }) | null>(null);
 
   return (
-    <section id="our-work" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 min-w-0">
+    <section id="our-work" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 w-full max-w-full overflow-hidden min-w-0">
       {/* Section Header */}
       <div className="flex flex-col items-start mb-16">
         <motion.div
@@ -145,7 +145,7 @@ export const FeaturedProjects: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: idx * 0.12 }}
-            className="glass-panel rounded-sm border border-[#FF172F]/20 overflow-hidden group hover:border-[#FF172F]/50 transition-all duration-500 shadow-[0_10px_35px_rgba(0,0,0,0.7)] min-w-0"
+            className="glass-panel rounded-sm border border-[#FF172F]/20 overflow-hidden group hover:border-[#FF172F]/50 transition-all duration-500 shadow-[0_10px_35px_rgba(0,0,0,0.7)] w-full max-w-full min-w-0"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
               {/* Left Column: Visual Schematic Preview */}

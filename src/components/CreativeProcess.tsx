@@ -40,7 +40,7 @@ const processSteps = [
 
 export const CreativeProcess: React.FC = () => {
   return (
-    <section id="process" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 min-w-0">
+    <section id="process" className="relative py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 w-full max-w-full overflow-hidden min-w-0">
       {/* Section Header */}
       <div className="flex flex-col items-start mb-20">
         <motion.div
@@ -74,7 +74,7 @@ export const CreativeProcess: React.FC = () => {
       </div>
 
       {/* Process Steps Connected Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative w-full max-w-full min-w-0">
         {processSteps.map((step, idx) => {
           const Icon = step.icon;
           return (
@@ -85,7 +85,7 @@ export const CreativeProcess: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.12 }}
               onMouseEnter={() => sound.playHover()}
-              className="glass-panel glass-panel-hover p-7 rounded-sm flex flex-col justify-between group relative overflow-hidden"
+              className="glass-panel glass-panel-hover p-6 sm:p-7 rounded-sm flex flex-col justify-between group relative overflow-hidden w-full max-w-full min-w-0"
             >
               {/* Corner Step Indicator */}
               <div className="absolute top-0 right-0 p-3 bg-[#050505] border-b border-l border-white/10 font-mono text-xs font-black text-[#FF172F]">
@@ -97,15 +97,15 @@ export const CreativeProcess: React.FC = () => {
                   <Icon size={22} />
                 </div>
 
-                <h3 className="font-display text-2xl font-black text-[#F5F5F5] group-hover:text-white mb-1 tracking-wide">
+                <h3 className="font-display text-2xl font-black text-[#F5F5F5] group-hover:text-white mb-1 tracking-wide break-words">
                   {step.title}
                 </h3>
 
-                <p className="font-mono text-[11px] text-[#FF612E] tracking-wider mb-4 uppercase font-semibold leading-tight">
+                <p className="font-mono text-[11px] text-[#FF612E] tracking-wider mb-4 uppercase font-semibold leading-tight break-words">
                   {step.motto}
                 </p>
 
-                <p className="font-sans text-xs sm:text-sm text-[#92929B] group-hover:text-[#F5F5F5]/85 leading-relaxed mb-6">
+                <p className="font-sans text-xs sm:text-sm text-[#92929B] group-hover:text-[#F5F5F5]/85 leading-relaxed mb-6 break-words">
                   {step.description}
                 </p>
               </div>
@@ -117,9 +117,9 @@ export const CreativeProcess: React.FC = () => {
                 </span>
                 <ul className="space-y-1">
                   {step.deliverables.map((item) => (
-                    <li key={item} className="flex items-center gap-1.5 text-xs font-mono text-[#F5F5F5]">
-                      <ArrowRight size={10} className="text-[#FF172F]" />
-                      <span>{item}</span>
+                    <li key={item} className="flex items-center gap-1.5 text-xs font-mono text-[#F5F5F5] min-w-0">
+                      <ArrowRight size={10} className="text-[#FF172F] shrink-0" />
+                      <span className="min-w-0 break-words">{item}</span>
                     </li>
                   ))}
                 </ul>

@@ -52,14 +52,16 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 select-none ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full overflow-x-hidden transition-all duration-500 select-none ${
         isScrolled
           ? 'py-3.5 bg-[#050505]/85 backdrop-blur-2xl border-b border-[#FF172F]/20 shadow-[0_12px_40px_rgba(0,0,0,0.85)]'
           : 'py-5 sm:py-6 bg-[#050505]/40 backdrop-blur-md border-b border-white/5'
       }`}
     >
       {/* Subtle Red Ambient Glow behind Navigation */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-5xl h-full bg-gradient-to-r from-transparent via-[#FF172F]/12 to-transparent blur-2xl pointer-events-none -z-10" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-5xl h-full bg-gradient-to-r from-transparent via-[#FF172F]/12 to-transparent blur-2xl pointer-events-none" />
+      </div>
 
       {/* Subtle Bottom Crimson Flare Line on Scroll */}
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#FF172F]/30 to-transparent pointer-events-none" />
