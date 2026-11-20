@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="60%" r="72%">
+      <stop offset="0" stop-color="#2b0a08"/>
+      <stop offset="0.55" stop-color="#0b0a0c"/>
+      <stop offset="1" stop-color="#050506"/>
+    </radialGradient>
+    <linearGradient id="flame" x1="0" y1="1" x2="0.2" y2="0">
+      <stop offset="0" stop-color="#7a0a12"/>
+      <stop offset="0.4" stop-color="#ff172f"/>
+      <stop offset="0.8" stop-color="#ff612e"/>
+      <stop offset="1" stop-color="#ffd0a8" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="900" height="560" fill="url(#bg)"/>
+  <g stroke="#ff172f" stroke-opacity="0.09" stroke-width="1">
+    <path d="M0 140H900M0 280H900M0 420H900M180 0V560M360 0V560M540 0V560M720 0V560"/>
+  </g>
+
+  <ellipse cx="450" cy="360" rx="240" ry="190" fill="#ff2a1e" opacity="0.14" filter="url(#glow)"/>
+
+  <!-- flame volumes -->
+  <g>
+    <path d="M450 470c-84 0-140-58-140-128 0-62 44-94 62-140 8-20 8-40 6-58 44 18 74 58 86 96 10-12 16-28 16-46 42 34 74 86 74 148 0 70-52 128-104 128Z" fill="#170408" stroke="url(#flame)" stroke-width="2.5"/>
+    <path d="M450 432c-46 0-76-32-76-72 0-34 26-52 38-78 4-10 4-22 2-32 24 12 40 32 48 54 6-8 10-18 10-28 22 20 38 50 38 84 0 40-28 72-60 72Z" fill="url(#flame)" opacity="0.55"/>
+    <g stroke="#ffb08a" stroke-opacity="0.4" stroke-width="1.5" fill="none">
+      <path d="M450 470V210"/>
+      <path d="M310 342h280M450 342l-90-84M450 342l90-84"/>
+    </g>
+  </g>
+
+  <!-- sensor rings -->
+  <g fill="none" stroke="#ff3a40" stroke-opacity="0.55">
+    <circle cx="450" cy="470" r="120" stroke-dasharray="3 9"/>
+    <circle cx="450" cy="470" r="190" stroke-dasharray="2 12" stroke-opacity="0.3"/>
+  </g>
+  <g fill="#ff2a35">
+    <circle cx="450" cy="470" r="5"/>
+  </g>
+
+  <!-- alert panel -->
+  <g font-family="Inter, Helvetica, Arial, sans-serif">
+    <rect x="632" y="150" width="206" height="120" rx="10" fill="#0c0b0e" stroke="#ff172f" stroke-opacity="0.45"/>
+    <circle cx="656" cy="178" r="4" fill="#ff2a35"/>
+    <text x="670" y="182" font-size="10" letter-spacing="4" fill="#f5f5f5" opacity="0.7">SYSTEM ARMED</text>
+    <path d="M656 214h158M656 236h158" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="656" y="212" font-size="9" letter-spacing="3" fill="#92929b">FLAME</text>
+    <text x="656" y="234" font-size="9" letter-spacing="3" fill="#92929b">SMOKE</text>
+    <text x="656" y="256" font-size="9" letter-spacing="3" fill="#92929b">HEAT</text>
+    <g fill="#ff612e">
+      <rect x="760" y="204" width="54" height="4"/>
+      <rect x="776" y="226" width="38" height="4"/>
+      <rect x="746" y="248" width="68" height="4"/>
+    </g>
+  </g>
+
+  <g font-family="Inter, Helvetica, Arial, sans-serif" fill="#f5f5f5">
+    <text x="56" y="512" font-size="13" letter-spacing="6" opacity="0.4">03 / FIRE DETECTION SYSTEM</text>
+    <text x="700" y="512" font-size="11" letter-spacing="4" opacity="0.3">MULTI-SENSOR</text>
+  </g>
+</svg>

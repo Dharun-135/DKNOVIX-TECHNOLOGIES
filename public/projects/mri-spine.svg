@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560">
+  <defs>
+    <radialGradient id="bg" cx="40%" cy="45%" r="80%">
+      <stop offset="0" stop-color="#26070d"/>
+      <stop offset="0.6" stop-color="#0a0a0d"/>
+      <stop offset="1" stop-color="#050506"/>
+    </radialGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff172f" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ff2a35"/>
+      <stop offset="1" stop-color="#ff612e" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <rect width="900" height="560" fill="url(#bg)"/>
+  <g stroke="#ff172f" stroke-opacity="0.09" stroke-width="1">
+    <path d="M0 100H900M0 200H900M0 300H900M0 400H900M0 500H900"/>
+    <path d="M120 0V560M260 0V560M400 0V560M540 0V560M680 0V560M820 0V560"/>
+  </g>
+
+  <ellipse cx="380" cy="280" rx="260" ry="230" fill="#ff172f" opacity="0.1" filter="url(#glow)"/>
+
+  <!-- spine column -->
+  <g>
+    <path d="M420 40c-26 110-26 212 0 300s30 128 6 178" stroke="#ff172f" stroke-opacity="0.4" stroke-width="26" fill="none" filter="url(#glow)"/>
+    <g fill="#101015" stroke="#ff3a40" stroke-opacity="0.6" stroke-width="1.6">
+      <rect x="378" y="62" width="76" height="34" rx="12"/>
+      <rect x="372" y="112" width="84" height="34" rx="12"/>
+      <rect x="368" y="162" width="90" height="36" rx="13"/>
+      <rect x="366" y="214" width="94" height="38" rx="14"/>
+      <rect x="368" y="268" width="92" height="38" rx="14"/>
+      <rect x="374" y="322" width="86" height="36" rx="13"/>
+      <rect x="382" y="374" width="78" height="34" rx="12"/>
+      <rect x="392" y="424" width="66" height="30" rx="11"/>
+    </g>
+    <g fill="#ff2a35" opacity="0.8">
+      <circle cx="416" cy="79" r="3.4"/><circle cx="414" cy="129" r="3.4"/><circle cx="412" cy="180" r="3.6"/>
+      <circle cx="412" cy="233" r="3.6"/><circle cx="414" cy="287" r="3.6"/><circle cx="418" cy="340" r="3.4"/>
+      <circle cx="422" cy="391" r="3.2"/><circle cx="426" cy="439" r="3"/>
+    </g>
+  </g>
+
+  <!-- scan line + detection box -->
+  <rect x="290" y="262" width="250" height="2" fill="url(#scan)" opacity="0.9"/>
+  <g stroke="#f5f5f5" stroke-opacity="0.6" stroke-width="1.5" fill="none">
+    <path d="M548 246h18v18M566 308v18h-18M330 246h-18v18M312 308v18h18"/>
+    <rect x="330" y="246" width="236" height="62" stroke-dasharray="4 6" opacity="0.55"/>
+  </g>
+  <text x="578" y="256" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" letter-spacing="3" fill="#ff612e">DEGENERATIVE</text>
+  <text x="578" y="276" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" letter-spacing="3" fill="#f5f5f5" opacity="0.5">REGION · L4–L5</text>
+
+  <!-- confidence readout -->
+  <g font-family="Inter, Helvetica, Arial, sans-serif" fill="#f5f5f5">
+    <text x="600" y="360" font-size="10" letter-spacing="4" opacity="0.4">CONFIDENCE</text>
+    <text x="600" y="396" font-size="34" letter-spacing="1" opacity="0.85">96.4%</text>
+    <rect x="600" y="414" width="190" height="4" fill="#ffffff" opacity="0.1"/>
+    <rect x="600" y="414" width="183" height="4" fill="#ff172f"/>
+  </g>
+
+  <g font-family="Inter, Helvetica, Arial, sans-serif" fill="#f5f5f5">
+    <text x="56" y="512" font-size="13" letter-spacing="6" opacity="0.4">02 / MRI SPINE ANALYSIS</text>
+    <text x="690" y="512" font-size="11" letter-spacing="4" opacity="0.3">TENSORFLOW · CNN</text>
+  </g>
+</svg>
