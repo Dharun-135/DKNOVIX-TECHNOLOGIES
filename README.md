@@ -62,7 +62,6 @@ A world-class, cinematic website built for **DKNOVIX TECHNOLOGIES**, featuring a
 - Brand symbol with rotating core.
 - Active section tracking with glowing crimson underline indicator.
 - Glowing red CTA: `LET'S TALK`.
-- Integrated Web Audio sci-fi sound effects synthesizer with mute/unmute toggle.
 - Responsive mobile drawer.
 
 ### 4. Hero Section (`HeroSection.tsx`)

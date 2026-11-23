@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { sound } from '../utils/sound';
 
 interface IntroProps {
   onComplete: () => void;
@@ -19,17 +18,14 @@ export const CinematicIntro: React.FC<IntroProps> = ({ onComplete }) => {
 
     const t1 = setTimeout(() => {
       setStage(1);
-      sound.playLaserSweep();
     }, 400);
 
     const t2 = setTimeout(() => {
       setStage(2);
-      sound.playHover();
     }, 1400);
 
     const t3 = setTimeout(() => {
       setStage(3);
-      sound.playSuccess();
     }, 2800);
 
     const t4 = setTimeout(() => {
@@ -68,7 +64,7 @@ export const CinematicIntro: React.FC<IntroProps> = ({ onComplete }) => {
               initial={{ scaleX: 0, opacity: 0 }}
               animate={{ scaleX: 1, opacity: [0, 1, 0.7, 1] }}
               transition={{ duration: 0.9, ease: 'easeOut' }}
-              className="absolute w-full h-[1.5px] bg-gradient-to-r from-transparent via-[#FF172F] to-transparent shadow-[0_0_15px_#FF172F]"
+              className="absolute w-full h-[1.5px] bg-gradient-to-r from-transparent via-[#FF172F] to-transparent"
             />
           )}
 
@@ -83,8 +79,8 @@ export const CinematicIntro: React.FC<IntroProps> = ({ onComplete }) => {
                 className="mb-6 flex items-center justify-center gap-3"
               >
                 <div className="relative w-10 h-10 flex items-center justify-center">
-                  <div className="absolute inset-0 border border-[#FF172F]/40 rotate-45 animate-pulse" />
-                  <div className="w-4 h-4 bg-[#FF172F] shadow-[0_0_15px_#FF172F]" />
+                  <div className="absolute inset-0 border border-[#FF172F]/40 rotate-45" />
+                  <div className="w-4 h-4 bg-[#FF172F]" />
                 </div>
               </motion.div>
             )}
@@ -144,20 +140,17 @@ export const CinematicIntro: React.FC<IntroProps> = ({ onComplete }) => {
             )}
           </div>
 
-          {/* System Status HUD line */}
-          <div className="absolute bottom-10 left-8 right-8 flex items-center justify-between text-[11px] font-mono text-[#92929B]/60 border-t border-white/5 pt-4">
+          {/* System Status line */}
+          <div className="absolute bottom-10 left-8 right-8 flex items-center justify-between text-xs font-mono text-[#92929B] border-t border-[rgba(255,255,255,0.10)] pt-4">
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FF172F] animate-ping" />
-              INITIALIZING NEURAL CORE // V2.8
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FF172F]" />
+              Loading 3D scene
             </span>
             <button
-              onClick={() => {
-                sound.playClick();
-                onComplete();
-              }}
-              className="text-[#92929B] hover:text-[#FF172F] transition-colors uppercase tracking-widest cursor-pointer border border-white/10 px-3 py-1 rounded-sm hover:border-[#FF172F]/40"
+              onClick={() => onComplete()}
+              className="text-[#92929B] hover:text-[#F5F5F5] transition-colors cursor-pointer border border-[rgba(255,255,255,0.15)] px-3 py-1 rounded-[4px] hover:border-[#FF172F]"
             >
-              [ SKIP INTRO ]
+              Skip intro
             </button>
           </div>
         </motion.div>
