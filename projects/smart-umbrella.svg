@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560">
+  <defs>
+    <radialGradient id="bg" cx="52%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#2a0b11"/>
+      <stop offset="0.55" stop-color="#0b0a0d"/>
+      <stop offset="1" stop-color="#060607"/>
+    </radialGradient>
+    <linearGradient id="canopy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff612e" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#ff172f"/>
+      <stop offset="1" stop-color="#6a0a14"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+  <rect width="900" height="560" fill="url(#bg)"/>
+  <g stroke="#ff172f" stroke-opacity="0.1" stroke-width="1">
+    <path d="M0 140H900M0 280H900M0 420H900M150 0V560M300 0V560M450 0V560M600 0V560M750 0V560"/>
+  </g>
+
+  <g opacity="0.55">
+    <ellipse cx="450" cy="300" rx="300" ry="300" fill="#ff172f" opacity="0.08" filter="url(#glow)"/>
+  </g>
+
+  <!-- umbrella canopy -->
+  <g>
+    <path d="M150 260C150 150 285 90 450 90s300 60 300 170c0 12-10 18-22 12-46-22-96-34-148-34-70 0-132 22-180 60-28 22-66 6-66-38Z" fill="#121216" stroke="url(#canopy)" stroke-width="2.5"/>
+    <path d="M150 260C150 150 285 90 450 90" fill="none" stroke="url(#canopy)" stroke-width="4" filter="url(#glow)" opacity="0.8"/>
+    <g stroke="#ff3a40" stroke-opacity="0.5" stroke-width="1.6" fill="none">
+      <path d="M450 90v188"/>
+      <path d="M450 90 268 232M450 90 632 232M450 90 342 262M450 90 558 262"/>
+    </g>
+  </g>
+
+  <!-- mast + servo -->
+  <g stroke="#f5f5f5" stroke-opacity="0.35" stroke-width="3">
+    <path d="M450 278v190"/>
+  </g>
+  <g>
+    <rect x="404" y="372" width="92" height="64" rx="8" fill="#0d0d11" stroke="#ff172f" stroke-opacity="0.55"/>
+    <circle cx="450" cy="404" r="17" fill="none" stroke="#ff612e" stroke-width="2.5"/>
+    <circle cx="450" cy="404" r="5" fill="#ff2a35"/>
+    <path d="M450 421v15" stroke="#ff612e" stroke-width="2"/>
+  </g>
+
+  <!-- rain + sensor nodes -->
+  <g stroke="#ff8a5c" stroke-opacity="0.35" stroke-width="1.5">
+    <path d="M230 120l-22 46M300 92l-22 46M520 96l-22 46M610 124l-22 46M690 168l-22 46"/>
+  </g>
+  <g fill="#ff2a35">
+    <circle cx="248" cy="214" r="4"/><circle cx="600" cy="200" r="4"/><circle cx="673" cy="238" r="3.5"/>
+  </g>
+
+  <!-- telemetry -->
+  <g font-family="Inter, Helvetica, Arial, sans-serif" fill="#f5f5f5">
+    <text x="56" y="512" font-size="13" letter-spacing="6" opacity="0.4">01 / IoT SMART UMBRELLA</text>
+    <text x="700" y="512" font-size="11" letter-spacing="4" opacity="0.3">ESP32 · BLYNK</text>
+  </g>
+  <g stroke="#ff172f" stroke-opacity="0.35" stroke-width="1.5" fill="none">
+    <path d="M710 180h64v96h-64z" opacity="0.5"/>
+    <path d="M726 204h32M726 224h32M726 244h20"/>
+  </g>
+</svg>

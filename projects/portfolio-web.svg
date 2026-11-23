@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560">
+  <defs>
+    <radialGradient id="bg" cx="55%" cy="40%" r="75%">
+      <stop offset="0" stop-color="#24070d"/>
+      <stop offset="0.6" stop-color="#0a0a0d"/>
+      <stop offset="1" stop-color="#050506"/>
+    </radialGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff612e"/>
+      <stop offset="0.6" stop-color="#ff172f"/>
+      <stop offset="1" stop-color="#5c0912"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="900" height="560" fill="url(#bg)"/>
+  <g stroke="#ff172f" stroke-opacity="0.09" stroke-width="1">
+    <path d="M0 120H900M0 240H900M0 360H900M0 480H900M150 0V560M300 0V560M450 0V560M600 0V560M750 0V560"/>
+  </g>
+
+  <ellipse cx="470" cy="270" rx="300" ry="200" fill="#ff172f" opacity="0.09" filter="url(#glow)"/>
+
+  <!-- browser frame -->
+  <g>
+    <rect x="150" y="96" width="600" height="352" rx="14" fill="#0c0c10" stroke="#ffffff" stroke-opacity="0.14"/>
+    <path d="M150 140h600" stroke="#ffffff" stroke-opacity="0.1"/>
+    <circle cx="178" cy="118" r="4" fill="#ff172f"/>
+    <circle cx="194" cy="118" r="4" fill="#ff612e" opacity="0.7"/>
+    <circle cx="210" cy="118" r="4" fill="#92929b" opacity="0.5"/>
+    <rect x="240" y="110" width="220" height="16" rx="8" fill="#ffffff" opacity="0.06"/>
+
+    <!-- hero block -->
+    <rect x="180" y="172" width="300" height="14" rx="4" fill="#f5f5f5" opacity="0.6"/>
+    <rect x="180" y="196" width="380" height="26" rx="4" fill="#ffffff" opacity="0.14"/>
+    <rect x="180" y="232" width="260" height="18" rx="4" fill="url(#edge)" opacity="0.75"/>
+    <rect x="180" y="272" width="210" height="8" rx="4" fill="#92929b" opacity="0.4"/>
+    <rect x="180" y="288" width="240" height="8" rx="4" fill="#92929b" opacity="0.28"/>
+    <rect x="180" y="322" width="120" height="34" rx="17" fill="url(#edge)"/>
+    <rect x="312" y="322" width="120" height="34" rx="17" fill="none" stroke="#ffffff" stroke-opacity="0.18"/>
+
+    <!-- data panel -->
+    <rect x="530" y="172" width="184" height="184" rx="10" fill="#ffffff" opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+    <g stroke="url(#edge)" stroke-width="2" fill="none">
+      <path d="M552 318l28-34 26 22 30-52 32 28 30-44"/>
+    </g>
+    <g fill="#ff2a35">
+      <circle cx="580" cy="284" r="3"/><circle cx="606" cy="306" r="3"/><circle cx="636" cy="254" r="3"/><circle cx="668" cy="282" r="3"/>
+    </g>
+    <rect x="552" y="192" width="70" height="6" rx="3" fill="#92929b" opacity="0.4"/>
+    <text x="640" y="199" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#f5f5f5" opacity="0.75">+184%</text>
+
+    <!-- cards row -->
+    <g>
+      <rect x="180" y="378" width="152" height="44" rx="8" fill="#ffffff" opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+      <rect x="344" y="378" width="152" height="44" rx="8" fill="#ffffff" opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+      <rect x="508" y="378" width="152" height="44" rx="8" fill="#ff172f" opacity="0.12" stroke="#ff172f" stroke-opacity="0.4"/>
+    </g>
+  </g>
+
+  <!-- floating code fragments -->
+  <g font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#ff612e" opacity="0.55">
+    <text x="700" y="80">&lt;React /&gt;</text>
+    <text x="96" y="500">npm run build</text>
+  </g>
+
+  <g font-family="Inter, Helvetica, Arial, sans-serif" fill="#f5f5f5">
+    <text x="56" y="76" font-size="13" letter-spacing="6" opacity="0.4">04 / WEB &amp; SOFTWARE</text>
+    <text x="690" y="512" font-size="11" letter-spacing="4" opacity="0.3">REACT · TYPESCRIPT</text>
+  </g>
+</svg>
