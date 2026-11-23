@@ -5,6 +5,8 @@ import { ArrowUpRight } from 'lucide-react';
 interface Project {
   id: string;
   title: string;
+  image: string;
+  alt: string;
   problem: string;
   built: string;
   tools: string[];
@@ -17,6 +19,8 @@ const projects: Project[] = [
   {
     id: 'smart-umbrella',
     title: 'Smart umbrella for bikes and cycles using IoT',
+    image: './projects/umbrella.webp',
+    alt: 'Illustration of a bicycle with a motorised umbrella',
     problem: 'Motorcyclists and cyclists have no hands-free protection against sudden downpours and harsh UV exposure while riding.',
     built: 'An automated IoT umbrella system using ESP32 and NodeMCU with rain, temperature, and UV sensors. A high-torque servo motor deploys or retracts the canopy automatically based on environmental thresholds, with real-time telemetry streaming to a Blynk mobile dashboard and a manual override switch.',
     tools: ['ESP32', 'NodeMCU', 'Rain Sensor', 'UV Sensor', 'Servo Motor', 'Blynk'],
@@ -26,6 +30,8 @@ const projects: Project[] = [
   {
     id: 'mri-lumbar',
     title: 'MRI-based lumbar spine degenerative condition detection',
+    image: './projects/spine.webp',
+    alt: 'Illustration of a glowing lumbar spine scan',
     problem: 'Diagnosing lumbar spine degeneration across hundreds of MRI slices requires time-consuming manual measurement by medical specialists.',
     built: 'A Convolutional Neural Network (CNN) in Python with TensorFlow and Keras that segments lumbar vertebrae (L1–S1) from MRI scans. It applies DICOM contrast normalization and noise reduction to detect disc herniation and spinal stenosis, generating visual anomaly maps to support clinical triage.',
     tools: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'DICOM', 'Image Processing'],
@@ -35,6 +41,8 @@ const projects: Project[] = [
   {
     id: 'fire-detection',
     title: 'Fire detection system',
+    image: './projects/fire.webp',
+    alt: 'Illustration of an ESP32 fire and smoke detection board',
     problem: 'Standard optical smoke alarms suffer from false alarms and sluggish reaction times during rapid thermal hazards in industrial workshops.',
     built: 'An embedded safety array combining optical flame sensors with smoke and heat sensors. The microcontroller runs localized anomaly-detection routines to verify combustion events within milliseconds and triggers automated buzzer alerts and digital notifications.',
     tools: ['Embedded C++', 'Flame Sensor', 'Gas/Smoke Sensor', 'Microcontrollers', 'Relay Circuits'],
@@ -44,6 +52,8 @@ const projects: Project[] = [
   {
     id: 'face-antispoofing',
     title: 'Three-stage face anti-spoofing',
+    image: './projects/antispoof.webp',
+    alt: 'Illustration of a three-stage face anti-spoofing verification system',
     problem: 'Facial verification cameras are vulnerable to presentation attacks using high-resolution printed photos, digital tablet replays, and flexible masks.',
     built: 'A physical Presentation Attack Detection (PAD) system built in three stages: Stage 1 uses Laplacian variance blur checks and MobileNetV3 for instant screening; Stage 2 applies EfficientNet texture inspection and 2D Fast Fourier Transform (FFT) frequency analysis to isolate screen Moiré patterns; Stage 3 evaluates a 16-frame sliding temporal buffer tracking physiological blinking and natural head movement.',
     tools: ['PyTorch', 'TorchVision', 'OpenCV', 'MobileNetV3', 'EfficientNet', '2D FFT', 'Albumentations'],
@@ -53,6 +63,8 @@ const projects: Project[] = [
   {
     id: 'portfolio-website',
     title: 'Personal portfolio website',
+    image: './projects/portfolio.webp',
+    alt: 'Illustration of developer portfolio website on laptop and mobile',
     problem: 'Presenting software engineering, data analytics, and embedded IoT projects in a clean, high-performance web experience.',
     built: 'A responsive developer studio website built with React 19, TypeScript, and Tailwind CSS. Features real-time 3D robotics with React Three Fiber, Framer Motion transitions, and Netlify form handling without third-party dependencies.',
     tools: ['React 19', 'TypeScript', 'Tailwind CSS', 'React Three Fiber', 'Framer Motion'],
@@ -88,7 +100,7 @@ export const FeaturedProjects: React.FC = () => {
         </p>
 
         {/* Large Alternating Rows */}
-        <div className="space-y-20 sm:space-y-24">
+        <div className="space-y-20 sm:space-y-28">
           {projects.map((project, idx) => {
             const isEven = idx % 2 === 0;
 
@@ -97,35 +109,72 @@ export const FeaturedProjects: React.FC = () => {
                 key={project.id}
                 className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
               >
-                {/* Visual Placeholder / Image with 1px border and 4px radius, no glow */}
+                {/* Visual Cover Card with 1px border and 4px radius, no glow */}
                 <div
-                  className={`lg:col-span-5 ${
-                    isEven ? 'lg:order-1' : 'lg:order-2'
-                  } w-full`}
+                  className={`w-full order-1 ${
+                    isEven ? 'lg:order-1 lg:col-span-5' : 'lg:order-2 lg:col-span-5'
+                  }`}
                 >
-                  <div className="bg-[#0B0B0E] border border-[rgba(255,255,255,0.10)] rounded-[4px] aspect-[16/10] p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden">
-                    <div className="flex items-center justify-between text-xs font-mono text-[#92929B] tabular-nums">
-                      <span>PROJECT {idx + 1} OF {projects.length}</span>
-                      <span>2024–2026</span>
+                  <div className="relative group overflow-hidden rounded-[4px] border border-[rgba(255,255,255,0.10)] aspect-[8/5] w-full bg-[#050505] flex flex-col justify-between p-5 sm:p-6">
+                    {/* Background Cover Image with 1.03 scale on hover */}
+                    <img
+                      src={project.image}
+                      alt={project.alt}
+                      loading={idx === 0 ? 'eager' : 'lazy'}
+                      decoding="async"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.03] pointer-events-none"
+                    />
+
+                    {/* Left-to-right dark gradient overlay (rgba(5,5,5,0.92) to transparent) */}
+                    <div
+                      className="absolute inset-0 bg-gradient-to-r from-[rgba(5,5,5,0.92)] via-[rgba(5,5,5,0.65)] to-transparent pointer-events-none"
+                      aria-hidden="true"
+                    />
+
+                    {/* Top Row: Tech Tags & View on GitHub Link */}
+                    <div className="relative z-10 flex items-start justify-between gap-3">
+                      <div className="flex flex-wrap gap-1.5 max-w-[65%]">
+                        {project.tools.slice(0, 3).map((tool) => (
+                          <span
+                            key={tool}
+                            className="font-mono text-[11px] text-[#D8D8DC] px-2 py-0.5 rounded-[4px] border border-[rgba(255,255,255,0.15)] bg-[rgba(5,5,5,0.70)]"
+                          >
+                            {tool}
+                          </span>
+                        ))}
+                      </div>
+
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link-underline font-mono text-xs text-[#D8D8DC] hover:text-[#FF172F] inline-flex items-center gap-1 shrink-0 bg-[rgba(5,5,5,0.70)] px-2.5 py-1 rounded-[4px] border border-[rgba(255,255,255,0.10)]"
+                      >
+                        <span>View on GitHub</span>
+                        <ArrowUpRight size={13} />
+                      </a>
                     </div>
 
-                    <div className="my-auto">
-                      <h4 className="font-display font-semibold text-lg sm:text-xl text-[#F5F5F5] leading-snug">
+                    {/* Middle: Title overlaid over dark gradient for legibility */}
+                    <div className="relative z-10 my-auto py-2">
+                      <h4 className="font-display font-semibold text-lg sm:text-xl text-[#F5F5F5] leading-snug max-w-[90%]">
                         {project.title}
                       </h4>
                     </div>
 
-                    <div className="flex items-center justify-between text-[11px] font-mono text-[#92929B]">
-                      <span>DKNOVIX REPOSITORY</span>
-                      <span className="text-[#FF172F]">VERIFIED</span>
+                    {/* Bottom Row: Caption "Illustration" in corner */}
+                    <div className="relative z-10 flex items-center justify-between">
+                      <span className="font-mono text-[10px] text-[#92929B] uppercase tracking-wider bg-[rgba(5,5,5,0.85)] px-2 py-0.5 rounded-[2px] border border-[rgba(255,255,255,0.10)]">
+                        Illustration
+                      </span>
                     </div>
                   </div>
                 </div>
 
                 {/* Project Details */}
                 <div
-                  className={`lg:col-span-7 ${
-                    isEven ? 'lg:order-2' : 'lg:order-1'
+                  className={`w-full order-2 ${
+                    isEven ? 'lg:order-2 lg:col-span-7' : 'lg:order-1 lg:col-span-7'
                   } flex flex-col justify-center text-left`}
                 >
                   <h3 className="font-display font-semibold text-2xl sm:text-3xl text-[#F5F5F5] mb-4 tracking-[-0.01em]">
@@ -168,7 +217,7 @@ export const FeaturedProjects: React.FC = () => {
                       rel="noopener noreferrer"
                       className="link-underline font-mono text-xs text-[#D8D8DC] inline-flex items-center gap-1.5"
                     >
-                      <span>Source code</span>
+                      <span>View on GitHub</span>
                       <ArrowUpRight size={14} />
                     </a>
 
