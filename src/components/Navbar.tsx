@@ -61,10 +61,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           </div>
 
           <div className="flex items-baseline gap-2">
-            <span className="font-display font-extrabold text-base sm:text-lg tracking-[0.14em] text-[#F5F5F5] group-hover:text-white transition-colors">
+            <span className="font-display font-extrabold text-base sm:text-lg tracking-[0.08em] text-[#F5F5F5] group-hover:text-white transition-colors">
               DKNOVIX
             </span>
-            <span className="font-mono text-[11px] tracking-[0.2em] text-[#92929B] uppercase font-normal">
+            <span className="font-mono text-[11px] tracking-[0.1em] text-[#B4B4BC] uppercase font-normal">
               TECHNOLOGIES
             </span>
           </div>

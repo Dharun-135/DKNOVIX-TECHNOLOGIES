@@ -39,7 +39,7 @@ const processSteps = [
 export const CreativeProcess: React.FC = () => {
   return (
     <section id="process" className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 w-full overflow-hidden">
-      {/* Section Header */}
+      {/* Section Header with One Crimson Word */}
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -48,9 +48,9 @@ export const CreativeProcess: React.FC = () => {
         className="mb-14 md:mb-16"
       >
         <h2 className="headline-section text-[#F5F5F5]">
-          How we work.
+          How we <span className="text-[#FF172F]">work.</span>
         </h2>
-        <p className="mt-4 text-[#D8D8DC]/90 text-base max-w-[62ch]">
+        <p className="mt-4 text-[#D8D8DC] text-base max-w-[62ch]">
           A clear four-step process from requirements to working deployment.
         </p>
       </motion.div>
@@ -68,32 +68,32 @@ export const CreativeProcess: React.FC = () => {
           >
             <div>
               <div className="flex items-center justify-between mb-6">
-                <span className="font-mono text-xs tabular-nums text-[#FF172F] tracking-wider">
+                <span className="font-mono text-xs tabular-nums text-[#FF172F] tracking-[0.02em]">
                   {item.step}
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-[rgba(255,255,255,0.20)]" />
               </div>
 
-              <h3 className="font-display font-semibold text-xl text-[#F5F5F5] mb-1">
+              <h3 className="title-subheading text-xl text-[#F5F5F5] mb-1">
                 {item.title}
               </h3>
 
-              <p className="font-mono text-xs text-[#92929B] mb-4">
+              <p className="font-mono text-xs text-[#B4B4BC] mb-4 tracking-[0.02em]">
                 {item.subtitle}
               </p>
 
-              <p className="text-sm text-[#D8D8DC]/90 leading-relaxed mb-6">
+              <p className="text-sm text-[#D8D8DC] leading-relaxed mb-6">
                 {item.description}
               </p>
             </div>
 
             <div className="pt-4 border-t border-[rgba(255,255,255,0.08)]">
-              <span className="font-mono text-[11px] text-[#92929B] block mb-2">
+              <span className="font-mono text-xs text-[#B4B4BC] block mb-2 tracking-[0.02em]">
                 Deliverables
               </span>
               <ul className="space-y-1.5">
                 {item.deliverables.map((deliv) => (
-                  <li key={deliv} className="font-mono text-xs text-[#F5F5F5] flex items-center gap-2">
+                  <li key={deliv} className="font-mono text-xs text-[#F5F5F5] flex items-center gap-2 tracking-[0.02em]">
                     <span className="text-[#FF172F] text-[10px]">—</span>
                     <span>{deliv}</span>
                   </li>

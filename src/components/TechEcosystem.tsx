@@ -37,7 +37,7 @@ export const TechEcosystem: React.FC = () => {
         transition={{ duration: 0.4, ease: 'easeOut' }}
         className="w-full"
       >
-        {/* Section Heading in Sentence Case */}
+        {/* Section Heading in Sentence Case with One Crimson Word */}
         <h2
           className="headline-section text-[#F5F5F5] mb-4 text-left"
           style={{ fontSize: 'clamp(2rem, 4.5vw, 3.6rem)' }}
@@ -45,7 +45,7 @@ export const TechEcosystem: React.FC = () => {
           Built with <span className="text-[#FF172F]">intelligence.</span>
         </h2>
 
-        <p className="font-sans text-[1.05rem] leading-[1.65] text-[#D8D8DC]/90 max-w-[62ch] mb-16 text-left">
+        <p className="font-sans text-[1.05rem] leading-[1.65] text-[#D8D8DC] max-w-[62ch] mb-16 text-left">
           Core languages, frameworks, and hardware platforms I use across application development, research papers, and production systems.
         </p>
 
@@ -56,9 +56,9 @@ export const TechEcosystem: React.FC = () => {
               key={group.name}
               className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start border-b border-[rgba(255,255,255,0.06)] pb-8"
             >
-              {/* Group Name in small mono */}
+              {/* Group Name in small mono, sentence case, #B4B4BC */}
               <div className="md:col-span-4">
-                <span className="font-mono text-xs text-[#92929B] uppercase tracking-[0.08em]">
+                <span className="font-mono text-xs text-[#B4B4BC] tracking-[0.02em]">
                   {group.name}
                 </span>
               </div>
@@ -68,7 +68,7 @@ export const TechEcosystem: React.FC = () => {
                 {group.items.map((tech) => (
                   <span
                     key={tech}
-                    className="font-mono text-xs text-[#D8D8DC] px-3 py-1.5 rounded-[4px] border border-[rgba(255,255,255,0.10)] bg-transparent hover:border-[#FF172F] transition-colors cursor-default"
+                    className="font-mono text-xs text-[#B4B4BC] px-3 py-1.5 rounded-[4px] border border-[rgba(255,255,255,0.10)] bg-transparent hover:border-[#FF172F] transition-colors cursor-default tracking-[0.02em]"
                   >
                     {tech}
                   </span>

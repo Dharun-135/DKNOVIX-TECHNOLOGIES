@@ -23,17 +23,17 @@ export const HeroSection: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="lg:col-span-7 xl:col-span-7 flex flex-col items-start text-left min-w-0 relative w-full"
         >
-          {/* Main Headline */}
+          {/* Main Headline in Archivo Variable 800 with width 125% */}
           <h1
             className="headline-hero text-[#F5F5F5] mb-6"
-            style={{ fontSize: 'clamp(2.6rem, 8vw, 7rem)', letterSpacing: '-0.03em', lineHeight: 1.0 }}
+            style={{ fontSize: 'clamp(2.3rem, 7.5vw, 6.5rem)', letterSpacing: '-0.03em', lineHeight: 1.0 }}
           >
             WE BUILD<br />
             WHAT'S <span className="text-gradient-fire">NEXT.</span>
           </h1>
 
           {/* Hero Paragraph */}
-          <p className="font-sans text-[1.05rem] leading-[1.65] text-[#D8D8DC]/90 max-w-[62ch] mb-8 font-normal">
+          <p className="font-sans text-[1.05rem] leading-[1.65] text-[#D8D8DC] max-w-[62ch] mb-8 font-normal">
             DKNOVIX is a small technology studio in Abu Dhabi. We build websites, data dashboards, AI models and IoT systems for businesses and startups.
           </p>
 
@@ -61,7 +61,7 @@ export const HeroSection: React.FC = () => {
       </div>
 
       {/* Bottom Minimal Indicator */}
-      <div className="pt-8 flex items-center gap-2 text-xs font-mono text-[#92929B]">
+      <div className="pt-8 flex items-center gap-2 text-xs font-mono text-[#B4B4BC] tracking-[0.02em]">
         <span>Abu Dhabi, UAE</span>
         <span>·</span>
         <span className="tabular-nums">2026</span>

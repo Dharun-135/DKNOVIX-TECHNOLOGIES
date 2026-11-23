@@ -141,14 +141,14 @@ export const CinematicIntro: React.FC<IntroProps> = ({ onComplete }) => {
           </div>
 
           {/* System Status line */}
-          <div className="absolute bottom-10 left-8 right-8 flex items-center justify-between text-xs font-mono text-[#92929B] border-t border-[rgba(255,255,255,0.10)] pt-4">
+          <div className="absolute bottom-10 left-8 right-8 flex items-center justify-between text-xs font-mono text-[#B4B4BC] border-t border-[rgba(255,255,255,0.10)] pt-4 tracking-[0.02em]">
             <span className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#FF172F]" />
               Loading 3D scene
             </span>
             <button
               onClick={() => onComplete()}
-              className="text-[#92929B] hover:text-[#F5F5F5] transition-colors cursor-pointer border border-[rgba(255,255,255,0.15)] px-3 py-1 rounded-[4px] hover:border-[#FF172F]"
+              className="text-[#B4B4BC] hover:text-[#F5F5F5] transition-colors cursor-pointer border border-[rgba(255,255,255,0.15)] px-3 py-1 rounded-[4px] hover:border-[#FF172F]"
             >
               Skip intro
             </button>

@@ -90,7 +90,7 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
 
   return (
     <section id="contact" className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10 scroll-mt-20 w-full overflow-hidden">
-      {/* Section Header */}
+      {/* Section Header with One Crimson Word */}
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -99,9 +99,9 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
         className="mb-14 md:mb-16"
       >
         <h2 className="headline-section text-[#F5F5F5]">
-          Let’s create something extraordinary.
+          Let’s create something <span className="text-[#FF172F]">extraordinary.</span>
         </h2>
-        <p className="mt-4 text-[#D8D8DC]/90 text-base max-w-[62ch]">
+        <p className="mt-4 text-[#D8D8DC] text-base max-w-[62ch]">
           Tell me about your project, timeline, and goals. I reply within two working days.
         </p>
       </motion.div>
@@ -116,52 +116,52 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
           className="lg:col-span-5 flex flex-col justify-between space-y-8"
         >
           <div>
-            <h3 className="font-display font-semibold text-xl text-[#F5F5F5] mb-2">
+            <h3 className="title-subheading text-xl text-[#F5F5F5] mb-2">
               DKNOVIX TECHNOLOGIES
             </h3>
-            <p className="font-mono text-xs text-[#92929B] mb-8">
+            <p className="font-mono text-xs text-[#B4B4BC] mb-8 tracking-[0.02em]">
               Abu Dhabi, United Arab Emirates
             </p>
 
             <div className="space-y-6 text-sm">
               <div>
-                <span className="font-mono text-xs text-[#92929B] block mb-1">
+                <span className="font-mono text-xs text-[#B4B4BC] block mb-1 tracking-[0.02em]">
                   Email
                 </span>
                 <a
                   href="mailto:dharun111004@gmail.com"
-                  className="link-underline text-base text-[#F5F5F5] break-all"
+                  className="link-underline text-base text-[#F5F5F5] break-all font-sans"
                 >
                   dharun111004@gmail.com
                 </a>
               </div>
 
               <div>
-                <span className="font-mono text-xs text-[#92929B] block mb-1">
+                <span className="font-mono text-xs text-[#B4B4BC] block mb-1 tracking-[0.02em]">
                   Phone
                 </span>
                 <a
                   href="tel:+971502332870"
-                  className="link-underline text-base text-[#F5F5F5] tabular-nums"
+                  className="link-underline text-base text-[#F5F5F5] font-mono tabular-nums tracking-[0.02em]"
                 >
                   +971 50 233 2870
                 </a>
               </div>
 
               <div>
-                <span className="font-mono text-xs text-[#92929B] block mb-1">
+                <span className="font-mono text-xs text-[#B4B4BC] block mb-1 tracking-[0.02em]">
                   Location
                 </span>
-                <span className="text-[#F5F5F5] text-base">
+                <span className="text-[#F5F5F5] text-base font-sans">
                   Abu Dhabi, UAE
                 </span>
               </div>
 
               <div>
-                <span className="font-mono text-xs text-[#92929B] block mb-1">
+                <span className="font-mono text-xs text-[#B4B4BC] block mb-1 tracking-[0.02em]">
                   Direct contact
                 </span>
-                <span className="text-[#F5F5F5] text-base">
+                <span className="text-[#F5F5F5] text-base font-sans">
                   Dharun Karthik S L
                 </span>
               </div>
@@ -169,7 +169,7 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
           </div>
 
           <div className="pt-6 border-t border-[rgba(255,255,255,0.10)]">
-            <p className="font-mono text-xs text-[#92929B] mb-4">
+            <p className="font-mono text-xs text-[#B4B4BC] mb-4 tracking-[0.02em]">
               Prefer quick messaging? Reach out directly:
             </p>
             <a
@@ -201,10 +201,10 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
                 exit={{ opacity: 0 }}
                 className="py-12 border-t border-[rgba(255,255,255,0.10)]"
               >
-                <h3 className="font-display font-semibold text-2xl text-[#F5F5F5] mb-2">
+                <h3 className="title-subheading text-2xl text-[#F5F5F5] mb-2">
                   Thank you for reaching out.
                 </h3>
-                <p className="text-sm text-[#D8D8DC]/90 max-w-[62ch] mb-6 leading-relaxed">
+                <p className="text-sm text-[#D8D8DC] max-w-[62ch] mb-6 leading-relaxed">
                   Your enquiry has been submitted successfully. I have received your details and will reply within two working days.
                 </p>
                 <button
@@ -267,7 +267,7 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div>
-                    <label className="font-mono text-xs text-[#92929B] mb-1 block">
+                    <label className="font-mono text-xs text-[#B4B4BC] mb-1 block tracking-[0.02em]">
                       Full name *
                     </label>
                     <input
@@ -287,7 +287,7 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
                   </div>
 
                   <div>
-                    <label className="font-mono text-xs text-[#92929B] mb-1 block">
+                    <label className="font-mono text-xs text-[#B4B4BC] mb-1 block tracking-[0.02em]">
                       Email address *
                     </label>
                     <input
@@ -309,7 +309,7 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div>
-                    <label className="font-mono text-xs text-[#92929B] mb-1 block">
+                    <label className="font-mono text-xs text-[#B4B4BC] mb-1 block tracking-[0.02em]">
                       Company or organization
                     </label>
                     <input
@@ -323,7 +323,7 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
                   </div>
 
                   <div>
-                    <label className="font-mono text-xs text-[#92929B] mb-1 block">
+                    <label className="font-mono text-xs text-[#B4B4BC] mb-1 block tracking-[0.02em]">
                       Service required *
                     </label>
                     <select
@@ -343,7 +343,7 @@ export const ContactSection: React.FC<ContactProps> = ({ selectedServicePreset }
                 </div>
 
                 <div>
-                  <label className="font-mono text-xs text-[#92929B] mb-1 block">
+                  <label className="font-mono text-xs text-[#B4B4BC] mb-1 block tracking-[0.02em]">
                     Project description *
                   </label>
                   <textarea

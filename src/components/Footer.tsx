@@ -5,7 +5,7 @@ export const Footer: React.FC = () => {
     <footer className="relative bg-[#050505] border-t border-[rgba(255,255,255,0.10)] py-12 md:py-16 z-10 w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center space-y-6">
         {/* Navigation & Document Links */}
-        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-mono text-xs text-[#92929B]">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-mono text-xs text-[#B4B4BC] tracking-[0.02em]">
           <a
             href="https://www.linkedin.com/in/dharun-karthik2332"
             target="_blank"
@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Single Centered Line with Location, Email, Phone, Copyright */}
-        <div className="font-mono text-xs text-[#92929B] tabular-nums leading-relaxed max-w-3xl">
+        <div className="font-mono text-xs text-[#B4B4BC] tabular-nums leading-relaxed max-w-3xl tracking-[0.02em]">
           Abu Dhabi, UAE ·{' '}
           <a
             href="mailto:dharun111004@gmail.com"

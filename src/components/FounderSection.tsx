@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, GraduationCap, Download, ArrowUpRight } from 'lucide-react';
-import founderEnhancedImg from '../assets/founder-enhanced.png';
+import { MapPin, GraduationCap, ArrowUpRight } from 'lucide-react';
+import founderEnhancedImg from '/founder-enhanced.png';
 
 const skills = [
   'Python',
@@ -33,20 +33,20 @@ export const FounderSection: React.FC = () => {
         transition={{ duration: 0.4, ease: 'easeOut' }}
         className="w-full"
       >
-        {/* Section Heading in Sentence Case */}
+        {/* Section Heading in Sentence Case with One Crimson Word */}
         <h2
           className="headline-section text-[#F5F5F5] mb-4 text-left"
           style={{ fontSize: 'clamp(2rem, 4.5vw, 3.6rem)' }}
         >
-          The human behind the <span className="text-[#FF172F]">technology.</span>
+          The engineer behind the <span className="text-[#FF172F]">work.</span>
         </h2>
 
-        <p className="font-sans text-[1.05rem] leading-[1.65] text-[#D8D8DC]/90 max-w-[62ch] mb-16 text-left">
-          Background, technical credentials, and engineering experience.
+        <p className="font-sans text-[1.05rem] leading-[1.65] text-[#D8D8DC] max-w-[62ch] mb-16 text-left">
+          Background, technical competencies, published research, and academic qualifications.
         </p>
 
-        {/* Split Layout: Photo on Left (Desktop), Information on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        {/* Split Layout: Flat Dark Panel + Outline around photo */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Flat dark panel with a thin outline around the photo */}
           <div className="lg:col-span-5 w-full max-w-md mx-auto lg:max-w-none">
             <div className="bg-[#0B0B0E] border border-[rgba(255,255,255,0.10)] rounded-[4px] p-5 sm:p-6 flex flex-col">
@@ -68,13 +68,13 @@ export const FounderSection: React.FC = () => {
 
               {/* Founder Identity Card Line */}
               <div className="pt-5 text-left">
-                <h3 className="font-display font-semibold text-xl text-[#F5F5F5]">
+                <h3 className="title-subheading text-xl text-[#F5F5F5]">
                   Dharun Karthik S L
                 </h3>
-                <p className="font-mono text-xs text-[#FF172F] mt-1 uppercase tracking-wider">
+                <p className="font-mono text-xs text-[#FF172F] mt-1 tracking-[0.02em]">
                   Founder &amp; Technology Developer
                 </p>
-                <p className="font-mono text-xs text-[#92929B] mt-2">
+                <p className="font-mono text-xs text-[#B4B4BC] mt-2 tracking-[0.02em]">
                   Abu Dhabi, UAE
                 </p>
               </div>
@@ -85,15 +85,15 @@ export const FounderSection: React.FC = () => {
           <div className="lg:col-span-7 flex flex-col justify-start text-left">
             {/* Header Identity */}
             <div className="mb-6">
-              <h3 className="font-display font-bold text-3xl sm:text-4xl text-[#F5F5F5] tracking-tight mb-2">
+              <h3 className="title-subheading text-3xl sm:text-4xl text-[#F5F5F5] mb-2">
                 Dharun Karthik S L
               </h3>
-              <p className="font-mono text-xs sm:text-sm text-[#FF172F] uppercase tracking-wider mb-2 font-medium">
+              <p className="font-mono text-xs sm:text-sm text-[#FF172F] mb-2 font-medium tracking-[0.02em]">
                 Founder &amp; Technology Developer
               </p>
 
               {/* Role Line */}
-              <p className="font-mono text-xs text-[#D8D8DC] mb-3 leading-relaxed">
+              <p className="font-mono text-xs text-[#B4B4BC] mb-3 leading-relaxed tracking-[0.02em]">
                 IT Support Engineer | Data Analyst | Full-Stack Developer | Application Developer
               </p>
 
@@ -103,20 +103,20 @@ export const FounderSection: React.FC = () => {
                 <span>Available for immediate joining. Open to Abu Dhabi, Dubai and wider UAE.</span>
               </div>
 
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-mono text-[#92929B] tabular-nums pt-1 border-t border-[rgba(255,255,255,0.08)]">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-mono text-[#B4B4BC] tabular-nums pt-1 border-t border-[rgba(255,255,255,0.08)] tracking-[0.02em]">
                 <div className="flex items-center gap-1.5">
                   <MapPin size={13} className="text-[#FF172F]" />
                   <span>Abu Dhabi, United Arab Emirates</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <GraduationCap size={14} className="text-[#92929B]" />
+                  <GraduationCap size={14} className="text-[#B4B4BC]" />
                   <span>B.Tech AI &amp; Data Science (2022–2026)</span>
                 </div>
               </div>
             </div>
 
             {/* Personal Statement written with "I" */}
-            <div className="space-y-3 font-sans text-[1.05rem] text-[#D8D8DC]/90 leading-[1.65] mb-8 border-l border-[rgba(255,255,255,0.15)] pl-4">
+            <div className="space-y-3 font-sans text-[1.05rem] text-[#D8D8DC] leading-[1.65] mb-8 border-l border-[rgba(255,255,255,0.15)] pl-4">
               <p>
                 I am an Artificial Intelligence and Data Science graduate with practical experience across machine learning, software development, data analytics, and embedded IoT systems.
               </p>
@@ -129,54 +129,54 @@ export const FounderSection: React.FC = () => {
             <div className="space-y-4 mb-8">
               {/* Education */}
               <div className="p-4 rounded-[4px] border border-[rgba(255,255,255,0.10)] bg-[#0B0B0E]">
-                <span className="font-mono text-[11px] text-[#92929B] uppercase block mb-1">
-                  EDUCATION
+                <span className="font-mono text-xs text-[#B4B4BC] block mb-1 tracking-[0.02em]">
+                  Education
                 </span>
                 <p className="font-sans text-sm text-[#F5F5F5] font-medium">
                   B.Tech Artificial Intelligence &amp; Data Science, 2022–2026
                 </p>
-                <p className="font-sans text-xs text-[#92929B] mt-1">
+                <p className="font-sans text-xs text-[#B4B4BC] mt-1">
                   P.A. College of Engineering and Technology (Autonomous, Anna University affiliated), Pollachi, India. CGPA 7.83/10, First Class.
                 </p>
               </div>
 
               {/* Experience */}
               <div className="p-4 rounded-[4px] border border-[rgba(255,255,255,0.10)] bg-[#0B0B0E]">
-                <span className="font-mono text-[11px] text-[#92929B] uppercase block mb-1">
-                  EXPERIENCE
+                <span className="font-mono text-xs text-[#B4B4BC] block mb-1 tracking-[0.02em]">
+                  Experience
                 </span>
                 <p className="font-sans text-sm text-[#F5F5F5] font-medium">
                   Machine Learning Intern, Crescent Infotech (90 days) · Data Science Intern, Neha Solutions (120 days)
                 </p>
-                <p className="font-sans text-xs text-[#92929B] mt-1">
+                <p className="font-sans text-xs text-[#B4B4BC] mt-1">
                   Built predictive models, cleaned relational datasets, and engineered automated image preprocessing routines.
                 </p>
               </div>
 
               {/* Leadership & Recognition */}
               <div className="p-4 rounded-[4px] border border-[rgba(255,255,255,0.10)] bg-[#0B0B0E]">
-                <span className="font-mono text-[11px] text-[#92929B] uppercase block mb-1">
-                  LEADERSHIP &amp; RECOGNITION
+                <span className="font-mono text-xs text-[#B4B4BC] block mb-1 tracking-[0.02em]">
+                  Leadership &amp; recognition
                 </span>
                 <p className="font-sans text-sm text-[#F5F5F5] font-medium">
-                  Treasurer, AI &amp; DS Department (2025–2026) · Joint Secretary (2024–2025)
+                  Treasurer (2025–2026) &amp; Joint Secretary (2024–2025), AI &amp; DS Department
                 </p>
-                <p className="font-sans text-xs text-[#92929B] mt-1">
-                  Selected at MSME Hackathon 2024 (Smart Umbrella project valued at ₹15 Lakh / ~AED 62,000). Published author in IJEDR journal (Paper ID: IJEDR2602179).
+                <p className="font-sans text-xs text-[#B4B4BC] mt-1">
+                  Selected at MSME Hackathon 2024 (Project Valued at ₹15 Lakh / ~AED 62,000) · Published Author in IJEDR.
                 </p>
               </div>
             </div>
 
-            {/* Skills as small outlined tags */}
+            {/* Core Skills Tags */}
             <div className="mb-8">
-              <span className="font-mono text-xs text-[#92929B] uppercase tracking-wider block mb-3">
-                TECHNICAL SKILLS
+              <span className="font-mono text-xs text-[#B4B4BC] block mb-3 tracking-[0.02em]">
+                Core technical skills
               </span>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
                   <span
                     key={skill}
-                    className="font-mono text-xs text-[#D8D8DC] px-2.5 py-1 rounded-[4px] border border-[rgba(255,255,255,0.10)]"
+                    className="font-mono text-xs text-[#B4B4BC] px-2.5 py-1 rounded-[4px] border border-[rgba(255,255,255,0.10)] tracking-[0.02em]"
                   >
                     {skill}
                   </span>
@@ -184,22 +184,22 @@ export const FounderSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Action Buttons: Download Resume, Portfolio, LinkedIn, GitHub */}
-            <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-[rgba(255,255,255,0.10)]">
+            {/* Direct Links */}
+            <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-[rgba(255,255,255,0.10)]">
               <a
                 href="/Dharun_Karthik_CV.pdf"
                 download="Dharun_Karthik_CV.pdf"
                 className="btn-primary"
               >
-                <Download size={15} />
                 <span>Download resume</span>
+                <ArrowUpRight size={14} />
               </a>
 
               <a
                 href="https://dharunkarthikportfolio.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary"
+                className="link-underline font-mono text-xs text-[#B4B4BC] hover:text-[#FF172F] inline-flex items-center gap-1.5 tracking-[0.02em]"
               >
                 <span>Portfolio</span>
                 <ArrowUpRight size={14} />
@@ -209,7 +209,7 @@ export const FounderSection: React.FC = () => {
                 href="https://www.linkedin.com/in/dharun-karthik2332"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary"
+                className="link-underline font-mono text-xs text-[#B4B4BC] hover:text-[#FF172F] inline-flex items-center gap-1.5 tracking-[0.02em]"
               >
                 <span>LinkedIn</span>
                 <ArrowUpRight size={14} />
@@ -219,7 +219,7 @@ export const FounderSection: React.FC = () => {
                 href="https://github.com/Dharun-135"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary"
+                className="link-underline font-mono text-xs text-[#B4B4BC] hover:text-[#FF172F] inline-flex items-center gap-1.5 tracking-[0.02em]"
               >
                 <span>GitHub</span>
                 <ArrowUpRight size={14} />
